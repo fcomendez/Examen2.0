@@ -1,71 +1,114 @@
-body{
-	font-family: 'Helvetica', sans-serif;
-	padding: 0;
-	margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap');
+:root {
+    --primary-color: #373742;
 }
 
 .contenedor{
 	display: flex;
 	max-width: 100%;
 	height: 80vh;
-	background-image: url(images/hero.jpg);
+	background-image: url(img/hero.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: left;
 	opacity: 0.95;
 }
-.contenedor .wrap{
-	max-width: 1000px;
-	margin: 0 auto;
-	height: 100%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: left;
+
+body {
+    font-family: "Oswald", sans-serif;
+    line-height: 1.5;
 }
-.contenedor .wrap .box{
-	flex-basis: 50%;
-	color: rgb(255, 255, 255);
-	text-align: left;
-	align-self: center;
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
 }
-.contenedor .wrap .box span{
-	font-size: 30px;
-	letter-spacing: 2px;
-	font-weight: 300;
-	
+
+h1 {
+    font-weight: 300;
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 15px;
 }
-.contenedor .wrap .box h1{
-	font-size: 52px;
-	line-height: .9;
-	padding-bottom: 10px;
-	
+
+.showcase {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    color: #fff;
 }
-.contenedor .wrap .box p{
-	font-size: 20px;
-	line-height: 1.2;
+
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--primary-color) url(images/hero.jpg) no-repeat center center/cover;
 }
-.contenedor .wrap .box .botones{
-	display: flex;
-	margin-top: 30px;
-	flex-flow: row wrap;
+
+.video-container video {
+    min-height: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
-.contenedor .wrap .box .botones .btn1{
-	flex-basis: 30%;
-	border: solid 2px;
-	border-radius: 20px;
-	padding: 10px 30px 10px 30px;
-	margin-right: 20px;
-	text-align: center;
-	text-decoration: none;
-	color: #fff;
+
+.video-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
 }
-.contenedor .wrap .box .botones .btn2{
-	flex-basis: 30%;
-	background-color: #fff;	
-	border: solid 2px;
-	border-radius: 20px;
-	padding: 10px 30px 10px 30px;
-	text-align: center;
-	text-decoration: none;
-	color: #000;
+
+.content {
+    z-index: 0;
+}
+
+.btn1 {
+    display: inline-block;
+    padding: 10px 30px;
+    background: var(--primary-color);
+    color: #fff;
+    border: 1px #fff solid;
+    border-radius: 5px;
+    margin-top: 25px;
+    opacity: 0.7;
+}
+
+.btn1:hover {
+    transform: scale(0.98);
+}
+
+#about {
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(226, 191, 243);
+}
+
+#about p {
+    font: size 1.2rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+#about h2 {
+    margin: 30px 0;
+    color: var(--primary-color);
+}
+
+.social a {
+    margin: 0 5px;
 }
