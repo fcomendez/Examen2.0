@@ -3,5 +3,5 @@ from .views import productos, carrito
 
 urlpatterns = [
     path('', productos, name="productos"),
-    #path('', carrito, name="carrito"),
+    path('carrito/', carrito, name="carrito"),
 ]

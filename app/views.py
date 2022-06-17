@@ -11,3 +11,5 @@ def productos(request):
 
 def carrito(request):
     return render(request, 'app/carrito.html')
+
+
